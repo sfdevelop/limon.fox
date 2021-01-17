@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "laravellimon-1",
+			"path": "laravellimon-1"
+		},
+		{
+			"name": "laravellimon-2",
+			"path": "laravellimon-2"
+		}
+	],
+	"settings": {
+		"cSpell.words": [
+			"authenticatable",
+			"barryvdh",
+			"helper",
+			"ide",
+			"laravel"
+		]
+	}
+}

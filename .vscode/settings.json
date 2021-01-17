@@ -1,0 +1,20 @@
+{
+    "cSpell.ignoreWords": [
+        "autoload",
+        "autoloader",
+        "beyondcode",
+        "classmap",
+        "debugbar",
+        "dev",
+        "discover",
+        "dont",
+        "fideloper",
+        "filp",
+        "fzaninotto",
+        "nexmo",
+        "nunomaduro",
+        "phpunit",
+        "predis",
+        "sslmode"
+    ]
+}
