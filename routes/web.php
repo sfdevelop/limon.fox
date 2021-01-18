@@ -11,6 +11,7 @@
 |
 */
 
+use App\Http\Controllers\Controller;
 use Nexmo\Account\PrefixPrice;
 
 Route::get('/', function () {
@@ -21,8 +22,18 @@ Route::group(['namespace' => 'Blog', 'prefix' => 'blog'], function () {
 });
 
 
-Route::resource('rest', 'RestTestController')->names('RestTest');
+// Route::resource('rest', 'RestTestController')->names('RestTest');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// Админка блога
+$groupData=[
+    'namespace' => 'Blog\Admin',
+    'prefix' => 'admin/blog',
+];
+
+Route::group($groupData, function () {
+    Route::resource('categories', 'CategoryController')->names('blog.admin.categories');
+});

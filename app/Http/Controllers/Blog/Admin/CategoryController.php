@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Blog;
+namespace App\Http\Controllers\Blog\Admin;
 
-use App\Modals\BlogPost;
+use App\Modals\BlogCategory;
 use Illuminate\Http\Request;
 
-class BlogController extends BaseController
+
+class CategoryController extends BaseController
 {
     /**
      * Display a listing of the resource.
@@ -14,11 +15,9 @@ class BlogController extends BaseController
      */
     public function index()
     {
-        $items = BlogPost::all();
+        $paginator = BlogCategory::paginate(5);
 
-        // dd($items);
-
-        return view('Blog.Posts.index', compact('items'));
+        return view('Blog.admin.category.index', compact('paginator'));
     }
 
     /**
@@ -28,7 +27,7 @@ class BlogController extends BaseController
      */
     public function create()
     {
-        //
+        dd(__METHOD__);
     }
 
     /**
@@ -39,7 +38,7 @@ class BlogController extends BaseController
      */
     public function store(Request $request)
     {
-        //
+        dd(__METHOD__);
     }
 
     /**
@@ -50,7 +49,7 @@ class BlogController extends BaseController
      */
     public function show($id)
     {
-        //
+        dd(__METHOD__);
     }
 
     /**
@@ -61,7 +60,7 @@ class BlogController extends BaseController
      */
     public function edit($id)
     {
-        //
+        dd(__METHOD__);
     }
 
     /**
@@ -73,7 +72,7 @@ class BlogController extends BaseController
      */
     public function update(Request $request, $id)
     {
-        //
+        dd(__METHOD__);
     }
 
     /**
@@ -84,6 +83,6 @@ class BlogController extends BaseController
      */
     public function destroy($id)
     {
-        //
+        dd(__METHOD__);
     }
 }
