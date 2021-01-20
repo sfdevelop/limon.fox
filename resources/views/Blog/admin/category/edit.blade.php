@@ -53,6 +53,7 @@
                     {!! Form::textarea('description', 'Description')
                     ->name('description')
                     ->id('description')
+                    ->attrs(['class' => 'ckeditor', 'row'=>'15'])
                     ->value(old('description', $item->description)) !!}
 
                 </div>

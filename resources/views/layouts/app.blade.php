@@ -15,6 +15,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+    <script src="//cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -76,5 +77,14 @@
             @yield('content')
         </main>
     </div>
+
+<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script>
+        $(function(){
+            window.setTimeout(function(){
+                $('.alert').alert('close');
+            },4000);
+        });
+    </script>
 </body>
 </html>

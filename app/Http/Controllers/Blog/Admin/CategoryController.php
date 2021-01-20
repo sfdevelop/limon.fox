@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Blog\Admin;
 
+use App\Http\Requests\BlogCategoryUpdateRequest;
 use App\Modals\BlogCategory;
 use Illuminate\Http\Request;
 
@@ -78,12 +79,20 @@ class CategoryController extends BaseController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(BlogCategoryUpdateRequest $request, $id)
     {
-        // $id=99999999;
-        // dd(__METHOD__, $request->all(), $id);
+
+        // $rules=[
+        //     'title' => 'required|min:5|max:200',
+        //     'slug' => 'max:200',
+        //     'description' => 'string|max:5000|min:10',
+        //     'parent_id' => 'required|integer|exists:blog_categories,id',
+        // ];
+
+        // $validateData = $request->validate($rules);
+
         $item = BlogCategory::find($id);
-        // dd($item);
+
         if (empty($item )) {
             return back()->withErrors(['msg'=>"запись id=[{$id}] не найдена"])->withInput();
         }

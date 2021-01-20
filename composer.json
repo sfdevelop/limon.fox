@@ -14,7 +14,8 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
-        "netojose/laravel-bootstrap-4-forms": "^3.0"
+        "netojose/laravel-bootstrap-4-forms": "^3.0",
+        "unisharp/laravel-ckeditor": "^4.7"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "v3.2.9",
