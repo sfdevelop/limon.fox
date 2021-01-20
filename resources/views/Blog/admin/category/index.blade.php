@@ -14,7 +14,7 @@
                 @php /** @var \App\Modals\BlogCategory */ @endphp
 
                 <div class="col-4 text-center py-2"> {{ $item->id }} </div>
-                <div class="col-4 text-center py-2"> {{ $item->title }} </div>
+                <div class="col-4 text-center py-2"><a href=" {{ route('blog.admin.categories.edit', $item->id) }} "> {{ $item->title }} </a> </div>
                 <div class="col-4 text-center py-2"> {{ $item->parent_id }} </div>
 
             @endforeach

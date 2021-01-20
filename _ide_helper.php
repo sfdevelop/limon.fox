@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.7.29 on 2021-01-17 19:01:57.
+ * Generated for Laravel 5.7.29 on 2021-01-20 13:53:32.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -14335,6 +14335,886 @@ namespace Barryvdh\Debugbar {
  
 }
 
+namespace NetoJose\Bootstrap4Forms { 
+
+    /**
+     * 
+     *
+     */ 
+    class Bootstrap4FormsFacade {
+        
+        /**
+         * Set error bag name
+         *
+         * @param string $value
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function errorBag($value = null)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::errorBag($value);
+        }
+        
+        /**
+         * Open the form
+         *
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function open()
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::open();
+        }
+        
+        /**
+         * Close the form
+         *
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function close()
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::close();
+        }
+        
+        /**
+         * Show all validation errors
+         *
+         * @param string $title
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function errors($title = null)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::errors($title);
+        }
+        
+        /**
+         * Set a prefix id for all inputs
+         *
+         * @param string $prefix
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function idPrefix($prefix = '')
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::idPrefix($prefix);
+        }
+        
+        /**
+         * Set multipart attribute for a form
+         *
+         * @param bool $multipart
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function multipart($multipart = true)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::multipart($multipart);
+        }
+        
+        /**
+         * Set a method attribute for the form
+         *
+         * @param string $method
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function method($method)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::method($method);
+        }
+        
+        /**
+         * Set get method for the form attribute
+         *
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function get()
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::get();
+        }
+        
+        /**
+         * Set post method for the form attribute
+         *
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function post()
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::post();
+        }
+        
+        /**
+         * Set put method for the form attribute
+         *
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function put()
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::put();
+        }
+        
+        /**
+         * Set patch method for the form attribute
+         *
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function patch()
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::patch();
+        }
+        
+        /**
+         * Set delete method for the form attribute
+         *
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function delete()
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::delete();
+        }
+        
+        /**
+         * Fill the form values
+         *
+         * @param array|object $data
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function fill($data)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::fill($data);
+        }
+        
+        /**
+         * Set locale file for inputs translations
+         *
+         * @param string $path
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function locale($path)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::locale($path);
+        }
+        
+        /**
+         * Set autocomplete attribute on form, or on individual input fields
+         *
+         * @param string $value
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function autocomplete($value = true)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::autocomplete($value);
+        }
+        
+        /**
+         * Set inline form style
+         *
+         * @param bool $inline
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function formInline($inline = true)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::formInline($inline);
+        }
+        
+        /**
+         * Set url for links and form action
+         *
+         * @param string $url
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function url($url = null)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::url($url);
+        }
+        
+        /**
+         * Set route for links and form action
+         *
+         * @param string $route
+         * @param array $params
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function route($route, $params = array())
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::route($route, $params);
+        }
+        
+        /**
+         * Open a fieldset
+         *
+         * @param string $legend
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function fieldsetOpen($legend = null)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::fieldsetOpen($legend);
+        }
+        
+        /**
+         * Close a fieldset
+         *
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function fieldsetClose()
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::fieldsetClose();
+        }
+        
+        /**
+         * Set a help text
+         *
+         * @param string $text
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function help($text)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::help($text);
+        }
+        
+        /**
+         * Create a file input
+         *
+         * @param string $name
+         * @param string $label
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function file($name = null, $label = null)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::file($name, $label);
+        }
+        
+        /**
+         * Create a text input
+         *
+         * @param string $name
+         * @param string $label
+         * @param string $default
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function text($name = null, $label = null, $default = null)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::text($name, $label, $default);
+        }
+        
+        /**
+         * Create a date input
+         *
+         * @param string $name
+         * @param string $label
+         * @param string $default
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function date($name = null, $label = null, $default = null)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::date($name, $label, $default);
+        }
+        
+        /**
+         * Create a time input
+         *
+         * @param string $name
+         * @param string $label
+         * @param string $default
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function time($name = null, $label = null, $default = null)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::time($name, $label, $default);
+        }
+        
+        /**
+         * Create a telephone input
+         *
+         * @param string $name
+         * @param string $label
+         * @param string $default
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function tel($name = null, $label = null, $default = null)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::tel($name, $label, $default);
+        }
+        
+        /**
+         * Create a url input
+         *
+         * @param string $name
+         * @param string $label
+         * @param string $default
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function urlInput($name = null, $label = null, $default = null)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::urlInput($name, $label, $default);
+        }
+        
+        /**
+         * Create a range input
+         *
+         * @param string $name
+         * @param string $label
+         * @param string $default
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function range($name = null, $label = null, $default = null)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::range($name, $label, $default);
+        }
+        
+        /**
+         * Set a minimum value for a field
+         *
+         * @param string $value
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function min($value)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::min($value);
+        }
+        
+        /**
+         * Set a maximum value for a field
+         *
+         * @param string $value
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function max($value)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::max($value);
+        }
+        
+        /**
+         * Create a hidden input
+         *
+         * @param string $name
+         * @param string $default
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function hidden($name = null, $default = null)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::hidden($name, $default);
+        }
+        
+        /**
+         * Create a select input
+         *
+         * @param string $name
+         * @param string $label
+         * @param array $options
+         * @param string|array $default
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function select($name = null, $label = null, $options = array(), $default = null)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::select($name, $label, $options, $default);
+        }
+        
+        /**
+         * Set options for a select field
+         *
+         * @param mixed $options
+         * @param string $valueKey
+         * @param string $idKey
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function options($options = array(), $valueKey = null, $idKey = null)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::options($options, $valueKey, $idKey);
+        }
+        
+        /**
+         * Set a multiple select attribute
+         *
+         * @param bool $multiple
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function multiple($status = true)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::multiple($status);
+        }
+        
+        /**
+         * Create a checkbox input
+         *
+         * @param string $name
+         * @param string $value
+         * @param string $label
+         * @param bool $checked
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function checkbox($name = null, $label = null, $value = 'on', $checked = null)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::checkbox($name, $label, $value, $checked);
+        }
+        
+        /**
+         * Create a radio input
+         *
+         * @param string $name
+         * @param string $value
+         * @param string $label
+         * @param bool $checked
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function radio($name = null, $label = null, $value = null, $checked = null)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::radio($name, $label, $value, $checked);
+        }
+        
+        /**
+         * Set inline input style
+         *
+         * @param bool $inline
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function inline($inline = true)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::inline($inline);
+        }
+        
+        /**
+         * Create a textarea input
+         *
+         * @param string $name
+         * @param string $label
+         * @param string $default
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function textarea($name = null, $label = null, $default = null)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::textarea($name, $label, $default);
+        }
+        
+        /**
+         * Set a label
+         *
+         * @param string $label
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function label($label)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::label($label);
+        }
+        
+        /**
+         * Create a button
+         *
+         * @param string $value
+         * @param string $color
+         * @param null $size
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function button($value = null, $color = 'primary', $size = null)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::button($value, $color, $size);
+        }
+        
+        /**
+         * Create a button type submit
+         *
+         * @param string $value
+         * @param string $color
+         * @param null $size
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function submit($value, $color = 'primary', $size = null)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::submit($value, $color, $size);
+        }
+        
+        /**
+         * Create a button type reset
+         *
+         * @param string $value
+         * @param string $color
+         * @param null $size
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function reset($value, $color = 'primary', $size = null)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::reset($value, $color, $size);
+        }
+        
+        /**
+         * Create a anchor
+         *
+         * @param string $value
+         * @param string $url
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function anchor($value, $url = null, $color = 'primary', $size = null)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::anchor($value, $url, $color, $size);
+        }
+        
+        /**
+         * Flag a checkbox or a radio input as checked
+         *
+         * @param bool $checked
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function checked($checked = true)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::checked($checked);
+        }
+        
+        /**
+         * Set a input value
+         *
+         * @param string $value
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function value($value = null)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::value($value);
+        }
+        
+        /**
+         * Set a input type
+         *
+         * @param string $type
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function type($type)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::type($type);
+        }
+        
+        /**
+         * Set a render
+         *
+         * @param string $render
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function render($render)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::render($render);
+        }
+        
+        /**
+         * Set a field id
+         *
+         * @param string $id
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function id($id)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::id($id);
+        }
+        
+        /**
+         * Set a field name
+         *
+         * @param string $name
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function name($name)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::name($name);
+        }
+        
+        /**
+         * Set the size
+         *
+         * @param string $size
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function size($size = null)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::size($size);
+        }
+        
+        /**
+         * Set the size as lg
+         *
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function lg()
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::lg();
+        }
+        
+        /**
+         * Set the size as sm
+         *
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function sm()
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::sm();
+        }
+        
+        /**
+         * Set the color
+         *
+         * @param string $color
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function color($color = null)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::color($color);
+        }
+        
+        /**
+         * Set primary color
+         *
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function primary()
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::primary();
+        }
+        
+        /**
+         * Set secondary color
+         *
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function secondary()
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::secondary();
+        }
+        
+        /**
+         * Set success color
+         *
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function success()
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::success();
+        }
+        
+        /**
+         * Set danger color
+         *
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function danger()
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::danger();
+        }
+        
+        /**
+         * Set warning color
+         *
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function warning()
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::warning();
+        }
+        
+        /**
+         * Set info color
+         *
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function info()
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::info();
+        }
+        
+        /**
+         * Set light color
+         *
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function light()
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::light();
+        }
+        
+        /**
+         * Set dark color
+         *
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function dark()
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::dark();
+        }
+        
+        /**
+         * Set link style
+         *
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function link()
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::link();
+        }
+        
+        /**
+         * Set outline style
+         *
+         * @param bool $status
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function outline($status = true)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::outline($status);
+        }
+        
+        /**
+         * Set block style
+         *
+         * @param bool $status
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function block($status = true)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::block($status);
+        }
+        
+        /**
+         * Set readonly style
+         *
+         * @param bool $status
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function readonly($status = true)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::readonly($status);
+        }
+        
+        /**
+         * Set the input disabled status
+         *
+         * @param bool $status
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function disabled($status = true)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::disabled($status);
+        }
+        
+        /**
+         * Set the input required status
+         *
+         * @param bool $status
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function required($status = true)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::required($status);
+        }
+        
+        /**
+         * Set the input placeholder
+         *
+         * @param string $placeholder
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function placeholder($placeholder)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::placeholder($placeholder);
+        }
+        
+        /**
+         * Set custom attributes for an input
+         *
+         * @param array $attrs
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function attrs($attrs = array())
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::attrs($attrs);
+        }
+        
+        /**
+         * Disable input states (valid and invalid classes) and error message
+         *
+         * @param string $disable
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function disableValidation($disable = true)
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::disableValidation($disable);
+        }
+        
+        /**
+         * Set custom attributes for a wrapper input
+         *
+         * @param array $attrs
+         * @return \NetoJose\Bootstrap4Forms\FormService 
+         * @static 
+         */ 
+        public static function wrapperAttrs($attrs = array())
+        {
+            return \NetoJose\Bootstrap4Forms\FormService::wrapperAttrs($attrs);
+        }
+         
+    }
+ 
+}
+
 
 namespace  { 
 
@@ -16766,6 +17646,8 @@ namespace  {
     class View extends \Illuminate\Support\Facades\View {}
 
     class Debugbar extends \Barryvdh\Debugbar\Facade {}
+
+    class Form extends \NetoJose\Bootstrap4Forms\Bootstrap4FormsFacade {}
  
 }
 

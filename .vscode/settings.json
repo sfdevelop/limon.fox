@@ -3,6 +3,7 @@
         "autoload",
         "autoloader",
         "beyondcode",
+        "categorylist",
         "classmap",
         "debugbar",
         "dev",
