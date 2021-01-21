@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Blog\Admin;
 
+use App\Http\Requests\BlogCategoryCreateRequest;
 use App\Http\Requests\BlogCategoryUpdateRequest;
 use App\Modals\BlogCategory;
 use Illuminate\Http\Request;
@@ -28,7 +29,14 @@ class CategoryController extends BaseController
      */
     public function create()
     {
-        dd(__METHOD__);
+        // dd(__METHOD__);
+
+        $item = new BlogCategory();
+        $categorylist = BlogCategory::all();
+
+        return view("Blog.admin.category.edit", compact('item', 'categorylist'));
+
+
     }
 
     /**
@@ -37,9 +45,28 @@ class CategoryController extends BaseController
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BlogCategoryCreateRequest $request)
     {
-        dd(__METHOD__);
+        // dd(__METHOD__);
+
+        $data=$request->input();
+
+        if (empty($data['slug'])) {
+            $data['slug']=str_slug($data['title']);
+        }
+
+            // создаем объект но не записываем в базу
+               $item= new BlogCategory($data);
+            //    dd($item);
+               $item->save();
+
+            if ($item) {
+                return redirect()->route('blog.admin.categories.create')->with(['success'=>'Новая категория создана']);
+            }
+                else
+                {
+                return back()->withErrors(['msg'=>'Ошибка сохранения']);
+            }
     }
 
     /**
@@ -68,8 +95,6 @@ class CategoryController extends BaseController
         $categorylist= BlogCategory::all();
         // dd($categorylist);
         return view('Blog.admin.category.edit',  compact('item','categorylist'));
-
-
     }
 
     /**
@@ -88,7 +113,6 @@ class CategoryController extends BaseController
         //     'description' => 'string|max:5000|min:10',
         //     'parent_id' => 'required|integer|exists:blog_categories,id',
         // ];
-
         // $validateData = $request->validate($rules);
 
         $item = BlogCategory::find($id);
@@ -98,6 +122,11 @@ class CategoryController extends BaseController
         }
 
         $data=$request  ->all();
+
+        if (empty($data['slug'])) {
+            $data['slug']=str_slug($data['title']);
+        }
+
         // dd($data);
         $result=$item->fill($data)->save();
 

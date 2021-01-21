@@ -2,7 +2,9 @@
 
 
 @section('content')
-
+    <div class="container">
+<a href=" {{ route('blog.admin.categories.create') }} " class="btn btn-primary" >Добавить</a>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-4 text-center font-weight-bold">ID </div>
@@ -14,7 +16,8 @@
                 @php /** @var \App\Modals\BlogCategory */ @endphp
 
                 <div class="col-4 text-center py-2"> {{ $item->id }} </div>
-                <div class="col-4 text-center py-2"><a href=" {{ route('blog.admin.categories.edit', $item->id) }} "> {{ $item->title }} </a> </div>
+                <div class="col-4 text-center py-2"><a href=" {{ route('blog.admin.categories.edit', $item->id) }} ">
+                        {{ $item->title }} </a> </div>
                 <div class="col-4 text-center py-2"> {{ $item->parent_id }} </div>
 
             @endforeach
