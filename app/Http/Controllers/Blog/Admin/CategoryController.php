@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Blog\Admin;
 use App\Http\Requests\BlogCategoryCreateRequest;
 use App\Http\Requests\BlogCategoryUpdateRequest;
 use App\Modals\BlogCategory;
+use App\Repositories\BlogCategoryRepository;
 use Illuminate\Http\Request;
 
 
@@ -17,7 +18,7 @@ class CategoryController extends BaseController
      */
     public function index()
     {
-        $paginator = BlogCategory::paginate(5);
+        $paginator = BlogCategory::paginate(50);
 
         return view('Blog.admin.category.index', compact('paginator'));
     }
@@ -86,14 +87,21 @@ class CategoryController extends BaseController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id, BlogCategoryRepository $categoryRepositories)
 
     {
-        // dd(__METHOD__);
-        $item = BlogCategory::findOrFail($id);
 
-        $categorylist= BlogCategory::all();
-        // dd($categorylist);
+        // $item = BlogCategory::findOrFail($id);
+        // $categorylist= BlogCategory::all();
+
+        $item  = $categoryRepositories -> getEdit($id);
+
+        if (empty($item)) {
+            abort(404);
+        }
+
+        $categorylist = $categoryRepositories -> getForCombobox();
+
         return view('Blog.admin.category.edit',  compact('item','categorylist'));
     }
 
@@ -128,7 +136,7 @@ class CategoryController extends BaseController
         }
 
         // dd($data);
-        $result=$item->fill($data)->save();
+        $result=$item->update($data);
 
         if ($result) {
             return redirect()->route('blog.admin.categories.edit', $item->id)->with(['success'=>'успешно сохранено']);
